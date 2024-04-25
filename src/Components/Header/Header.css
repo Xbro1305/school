@@ -1,0 +1,30 @@
+nav {
+  padding: 20px 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #132c38;
+  border-bottom: 1px solid #fbcd76 !important;
+}
+
+nav section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #fbcd76;
+}
+
+nav > :last-child {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #fbcd76;
+}

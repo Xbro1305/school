@@ -1,0 +1,21 @@
+@import url("https://fonts.cdnfonts.com/css/rockstar");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Rockstar;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  max-width: 1920px;
+  width: 100% !important;
+}
+
+.main {
+  background: #212121;
+}

@@ -1,0 +1,49 @@
+
+.searchbar {
+  padding: 20px 160px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.searchbar img {
+  width: 20px;
+  height: 20px;
+}
+
+.albumSect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #132c38;
+  padding: 100px 160px;
+  gap: 20px;
+}
+
+.albumSect > h1 {
+  width: 100%;
+  color: aliceblue;
+  font-weight: 100;
+  font-size: 24px;
+}
+
+.image {
+  width: calc((100% - 60px) / 4);
+}
+
+.albumSect > :nth-child(2) {
+  border-radius: 20px 0 0 0;
+}
+
+.albumSect > :nth-child(5) {
+  border-radius: 0 20px 0 0;
+}
+
+.albumSect > :nth-child(6) {
+  border-radius: 0 0 0 20px;
+}
+
+.albumSect > :nth-child(9) {
+  border-radius: 0 0 20px 0;
+}
+
