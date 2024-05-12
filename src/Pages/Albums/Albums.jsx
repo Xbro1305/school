@@ -12,25 +12,50 @@ export const Albums = () => {
         <img src={Search} alt="" />
         <input type="text" />
       </section>
-      {images.map((image, index) => {
-        return (
-          <div
-            className="albumSect"
-            key={index}
-            onClick={() => navigate("/album/" + image.name)}
-          >
-            <h1>{image.name}</h1>
-            {image.list.slice(0, 8).map((i, index) => (
-              <img
-                src={require("../../" + i.url)}
-                alt={i.index}
-                key={index}
-                className="image"
-              />
-            ))}
-          </div>
-        );
-      })}
+      <div className="desktop">
+        {images.map((image, index) => {
+          return (
+            <div
+              className="albumSect"
+              key={index}
+              onClick={() => navigate("/album/" + image.name)}
+            >
+              <h1>{image.name}</h1>
+              {image.list.slice(0, 7).map((i, index) => (
+                <img
+                  src={require("../../" + i.url)}
+                  alt={i.index}
+                  key={index}
+                  className="image"
+                />
+              ))}
+              <div className="image">+{image.list.length - 7}</div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="mobile">
+        {images.map((image, index) => {
+          return (
+            <div
+              className="albumSect"
+              key={index}
+              onClick={() => navigate("/album/" + image.name)}
+            >
+              <h1>{image.name}</h1>
+              {image.list.slice(0, 3).map((i, index) => (
+                <img
+                  src={require("../../" + i.url)}
+                  alt={i.index}
+                  key={index}
+                  className="image"
+                />
+              ))}
+              <div className="image">+{image.list.length - 3}</div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

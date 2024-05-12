@@ -39,7 +39,7 @@
 }
 
 .modal > img {
-  width: 500px;
+  height: 55vh;
 }
 
 .control {
@@ -92,4 +92,48 @@
   cursor: pointer;
   width: 70px;
   border: none;
+  background: none;
+}
+
+.mobile {
+  display: none;
+}
+
+.mobile.active {
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .album {
+    padding: 12px;
+    gap: 5px;
+  }
+
+  .albumImgs img {
+    width: calc((100% - 40px) / 3);
+  }
+
+  .mobile.active {
+    display: flex;
+  }
+
+  .desktop.active {
+    display: none;
+  }
+
+  .mobile.active img {
+    width: 100%;
+  }
+
+  .mobile.active .close {
+    left: 0;
+  }
+
+  .count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-family: sans-serif;
+  }
 }

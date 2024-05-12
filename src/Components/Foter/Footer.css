@@ -9,3 +9,10 @@ footer h1 {
   padding: 20px 160px;
   color: #fff;
 }
+
+@media (max-width: 769px) {
+  footer{
+    display: none;
+  }
+
+}

@@ -28,3 +28,27 @@ nav > :last-child {
   border-radius: 50%;
   border: 1px solid #fbcd76;
 }
+
+@media (max-width: 769px) {
+  nav {
+    padding: 12px;
+  }
+
+  nav > :first-child {
+    width: 30px;
+    height: 30px;
+  }
+
+  nav section a {
+    display: none;
+  }
+
+  nav section a.active {
+    display: block;
+  }
+
+  nav > :last-child {
+    width: 30px;
+    height: 30px;
+  }
+}
