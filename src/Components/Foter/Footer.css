@@ -10,9 +10,30 @@ footer h1 {
   color: #fff;
 }
 
-@media (max-width: 769px) {
-  footer{
+.mobileFooter {
+  display: none;
+  border-top: 1px solid #c4cdcc;
+  padding: 20px 30px;
+  align-items: center;
+  justify-content: space-between;
+  background: #132c38;
+}
+
+.mobileFooter img {
+  width: 20px;
+  height: 20px;
+}
+
+.mobileFooter a.active img {
+  fill: #fbcd76 !important;
+}
+
+@media (max-width: 900px) {
+  .desktopFooter {
     display: none;
   }
 
+  .mobileFooter {
+    display: flex !important;
+  }
 }

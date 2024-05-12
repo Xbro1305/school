@@ -1,0 +1,41 @@
+.back {
+  padding: 10px 410px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+}
+
+.back h2 {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.pupilss {
+  padding: 10px 410px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 1620px) {
+  .pupilss,
+  .back {
+    padding: 12px 160px;
+  }
+}
+
+@media (max-width: 900px) {
+  .back {
+    padding: 12px;
+  }
+
+  .pupilss {
+    padding: 12px;
+  }
+
+  .pupilss .pupil {
+    width: 100% !important;
+  }
+}

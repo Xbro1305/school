@@ -13,7 +13,7 @@ export const Header = () => {
         <NavLink to={"/albums"}>Альбомы</NavLink>
         <NavLink to={"/contacts"}>Контакты</NavLink>
         <NavLink to={"/forum"}>Форум</NavLink>
-        <NavLink to={"/lomonosovy"}>Ломоносовцы</NavLink>
+        <NavLink to={"/pupils"}>Ломоносовцы</NavLink>
       </section>
       <img
         onClick={() => navigate("/profile")}

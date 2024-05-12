@@ -1,0 +1,78 @@
+.pupils > div {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.year {
+  display: flex;
+  flex-direction: column;
+  background: #132c38;
+  padding: 45px 410px;
+  gap: 30px;
+}
+
+.year h1 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ccc;
+}
+
+.year .vipuskniki {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.pupil {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: calc((100% - 90px) / 4);
+}
+
+.pupil img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #fbcd76;
+}
+
+.pupil h2 {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.mobile {
+  display: none !important;
+}
+
+@media (max-width: 1620px) {
+  .year {
+    padding: 40px 160px;
+  }
+}
+
+@media (max-width: 900px) {
+  .mobile {
+    display: flex !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+
+  .year {
+    padding: 12px;
+  }
+
+  .pupil {
+    width: calc((100% - 90px) / 2) !important;
+  }
+}

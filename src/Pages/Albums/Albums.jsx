@@ -7,11 +7,11 @@ import Search from "../../images/Search.svg";
 export const Albums = () => {
   const navigate = useNavigate();
   return (
-    <div className="main Albums">
-      <section className="searchbar">
+    <div className="main albums">
+      {/* <section className="searchbar">
         <img src={Search} alt="" />
         <input type="text" />
-      </section>
+      </section> */}
       <div className="desktop">
         {images.map((image, index) => {
           return (

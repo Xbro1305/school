@@ -75,11 +75,15 @@
 }
 
 @media (max-width: 900px) {
-  .desktop.active {
+  .news .modal.mobile {
+    display: none !important;
+  }
+  
+  .news .desktop.active {
     display: none !important;
   }
 
-  .mobile.active {
+  .news .mobile.active {
     display: flex !important;
   }
 
@@ -95,6 +99,7 @@
 
   .new figure {
     width: 100%;
+    max-width: 500px;
   }
 
   .new section {
@@ -113,9 +118,10 @@
     line-height: 20px;
   }
 
-  .main {
+  .new .main {
     max-height: 300px !important;
     height: 300px;
+    max-width: 500px;
   }
 
   .secondary {

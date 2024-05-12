@@ -1,5 +1,5 @@
 nav {
-  padding: 20px 160px;
+  padding: 20px 410px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,13 @@ nav > :last-child {
   border: 1px solid #fbcd76;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 1620px) {
+  nav {
+    padding: 20px 160px;
+  }
+}
+
+@media (max-width: 900px) {
   nav {
     padding: 12px;
   }

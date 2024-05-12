@@ -53,9 +53,10 @@
 
 .mobile {
   display: none;
+  flex-direction: column;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 900px) {
   .albumSect {
     padding: 12px;
     gap: 5px;
@@ -66,7 +67,7 @@
   }
 
   .mobile {
-    display: block;
+    display: flex !important;
   }
 
   .albumSect > :nth-child(2) {
