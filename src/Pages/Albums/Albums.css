@@ -13,7 +13,7 @@
 .albumSect {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   background: #132c38;
   padding: 100px 160px;
   gap: 20px;

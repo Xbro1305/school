@@ -1,28 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { images } from "../../images";
 import arrow from "../../images/arrow.svg";
 import close from "../../images/close.svg";
 import "./Album.css";
+import axios from "axios";
 
 export const Album = () => {
+  useEffect(() => {
+    axios(`http://26.195.91.164:8000/photos/get_album/${name}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => {
+        setAlbum(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   const [image, setImage] = useState(false);
   const { name } = useParams();
-  const album = images.find((i) => i.name == name);
+  const [album, setAlbum] = useState([]);
   const from = image < 1 ? 0 : image - 1;
   const to =
-    image + 1 >= album.list.length - 1 ? album.list.length - 1 : image + 1;
+    image + 1 >= album?.photos?.length - 1
+      ? album?.photos?.length - 1
+      : image + 1;
   console.log(from, to, image);
 
   return (
     <div className="main album">
       <h1 className="albumTitle">{album.name}</h1>
       <div className="albumImgs">
-        {album.list.map((item, index) => (
+        {album?.photos?.map((item, index) => (
           <img
             onClick={() => setImage(index)}
             key={index}
-            src={require("../../" + item.url)}
+            src={"http://26.195.91.164:8000" + item.url}
             alt=""
           />
         ))}
@@ -42,9 +56,9 @@ export const Album = () => {
         <img
           src={
             image
-              ? require("../../" + album?.list[image].url)
+              ? "http://26.195.91.164:8000/" + album?.photos[image].url
               : image === 0
-              ? require("../../" + album?.list[image].url)
+              ? "http://26.195.91.164:8000/" + album?.photos[image].url
               : ""
           }
           alt=""
@@ -56,10 +70,11 @@ export const Album = () => {
           >
             <img src={arrow} alt="" />
           </button>
-          {album.list
-            .slice(
-              to == album.list.length - 1 && from == album.list.length - 2
-                ? from - 1
+          {album?.photos
+            ?.slice(
+              to == album?.photos?.length - 1 &&
+                from == album?.photos?.length - 2
+                ? from
                 : from,
               from == 0 && to == 1 ? to + 2 : to + 1
             )
@@ -69,15 +84,13 @@ export const Album = () => {
                   setImage(item.index == image ? album.length - 2 : item.index)
                 }
                 key={index}
-                src={require("../../" + item.url)}
-                style={
-                  item.index == image + 1 ? { transform: "scale(1.5)" } : {}
-                }
+                src={"http://26.195.91.164:8000/" + item.url}
+                style={item.id == image ? { transform: "scale(1.5)" } : {}}
                 alt={index}
               />
             ))}
           <button
-            disabled={image == album.list.length - 1 ? true : false}
+            disabled={image == album?.photos?.length - 1 ? true : false}
             onClick={() => setImage(image + 1)}
           >
             <img src={arrow} alt="" />
@@ -97,15 +110,15 @@ export const Album = () => {
           <img src={close} alt="" />
         </button>
         <p className="count">
-          {image + 1} / {album.list.length}
+          {image + 1} / {album?.photos?.length}
         </p>
 
         <img
           src={
             image
-              ? require("../../" + album?.list[image].url)
+              ? "http://26.195.91.164:8000/" + album?.photos[image].url
               : image === 0
-              ? require("../../" + album?.list[image].url)
+              ? "http://26.195.91.164:8000/" + album?.photos[image].url
               : ""
           }
           alt=""

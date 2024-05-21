@@ -10,6 +10,8 @@ import { Contact } from "./Pages/Contact/Contact";
 import { Pupil } from "./Pages/Pupil/Pupil";
 import { Pupils } from "./Pages/Pupils/Pupils";
 import { Forum } from "./Pages/Forum/Forum";
+import { Profile } from "./Pages/User/Profile";
+import { Auth } from "./Pages/Auth/Auth";
 
 export const App = () => {
   return (
@@ -20,10 +22,12 @@ export const App = () => {
         <Route path="/album/:name" element={<Album />} />
         <Route path="*" element={<h1>404</h1>} />
         <Route path="/news" element={<News />} />
-        <Route path="/callback" element={<Contact />} />
-        <Route path="/pupils" element={<Pupil />} />
-        <Route path="/pupils/:year" element={<Pupils />} />
+        <Route path="/contacts" element={<Contact />} />
+        <Route path="/graduates" element={<Pupil />} />
+        <Route path="/graduates/:year" element={<Pupils />} />
         <Route path="/forum" element={<Forum />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Auth />} />
       </Routes>
       <Footer />
     </BrowserRouter>

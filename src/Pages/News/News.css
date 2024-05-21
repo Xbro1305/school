@@ -74,11 +74,15 @@
   flex-direction: row-reverse;
 }
 
+.modal {
+  flex-direction: column !important;
+}
+
 @media (max-width: 900px) {
   .news .modal.mobile {
     display: none !important;
   }
-  
+
   .news .desktop.active {
     display: none !important;
   }

@@ -1,0 +1,90 @@
+.auth {
+  width: 100%;
+  min-height: calc(100vh - 196px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth > div {
+  background: #132c38;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.auth > div > h1 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  padding: 0 35px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+
+.auth form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth input,
+.auth button {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+.auth p {
+  font-family: sans-serif;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #a0a0a0;
+}
+
+.auth label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.auth label img {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-family: sans-serif;
+}
+
+.auth button {
+  width: 100% !important;
+  background: #fbcd76;
+  margin-top: 22px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media (max-width: 500px) {
+  .auth > div > h1 {
+    font-size: 18px;
+    padding: 0;
+  }
+
+  .auth > div {
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+  }
+}
