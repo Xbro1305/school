@@ -6,13 +6,6 @@ export const Contact = () => {
   return (
     <div className="main contact">
       <form className="form">
-        <input
-          type="file"
-          name="inppp"
-          onChange={(e) => {
-            console.log(e.target);
-          }}
-        />
         <h1>Форма обратной связи</h1>
         <section>
           <section>

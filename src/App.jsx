@@ -9,9 +9,10 @@ import { News } from "./Pages/News/News";
 import { Contact } from "./Pages/Contact/Contact";
 import { Pupil } from "./Pages/Pupil/Pupil";
 import { Pupils } from "./Pages/Pupils/Pupils";
-import { Forum } from "./Pages/Forum/Forum";
 import { Profile } from "./Pages/User/Profile";
 import { Auth } from "./Pages/Auth/Auth";
+import { Forum } from "./Pages/Forum/Forum";
+import { Topic } from "./Pages/Topic/Topic";
 
 export const App = () => {
   return (
@@ -28,6 +29,7 @@ export const App = () => {
         <Route path="/forum" element={<Forum />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Auth />} />
+        <Route path="/topic/:id" element={<Topic />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { images } from "../../images";
 import arrow from "../../images/arrow.svg";
 import close from "../../images/close.svg";
 import "./Album.css";
